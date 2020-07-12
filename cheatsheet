@@ -1,0 +1,12 @@
+1  docker build -t "jenkins-devops" .
+    2  docker run -d -p 80:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins-devops
+    3  docker ps -a
+    4  cat /var/jenkins_home/secrets/initialAdminPassword
+    5  cd /var/
+    6  ls
+    7  docker exec -it  8f9b6b44111d
+    8  docker exec -it  8f9b6b44111d bash
+    9  docker tag jenkins-devops poojadocker912/jenkins-devops:1.0
+   10  docker push  poojadocker912/jenkins-devops:1.0
+   11  docker login
+   12  docker push  poojadocker912/jenkins-devops:1.0
